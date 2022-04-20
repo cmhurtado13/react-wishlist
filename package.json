@@ -1,0 +1,60 @@
+{
+  "name": "react-wishlist",
+  "version": "1.0.0",
+  "description": "Explicación Curso REACT para Principiantes Webinars",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "lint": "eslint --fix src/**/*.{js,jsx}",
+    "format": "prettier --write \"*.{js,jsx,json,css}\""
+  },
+  "prettier": {
+    "trailingComa": "all",
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "env": {
+      "browser": true
+    },
+    "rules": {
+      "linebreak-style": "off"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmhurtado13/react-wishlist.git"
+  },
+  "author": "Carlos Mario Hurtado Herrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmhurtado13/react-wishlist/issues"
+  },
+  "homepage": "https://github.com/cmhurtado13/react-wishlist#readme",
+  "dependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.8",
+    "prettier": "^2.6.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx": "^0.1.0",
+    "eslint-plugin-react": "^7.29.4",
+    "parcel-bundler": "^1.12.5",
+    "prop-types": "^15.8.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "npm run lint"
+    ]
+  }
+}
